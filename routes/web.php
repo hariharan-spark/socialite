@@ -24,3 +24,10 @@ Route::get('/auth/google', [App\Http\Controllers\GoogleController::class, 'redir
 Route::get('/auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback']);
 
 
+
+Route::get('/file-import',[App\Http\Controllers\UserController::class,'importView'])->name('import-view');
+Route::post('/import',[App\Http\Controllers\UserController::class,'import'])->name('import');
+Route::get('/export-users',[App\Http\Controllers\UserController::class,'exportUsers'])->name('export-users');
+
+
+
